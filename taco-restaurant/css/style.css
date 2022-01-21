@@ -76,8 +76,7 @@ button:hover {
 
 .main-taco {
   grid-area: main;
-  //background-image: url('../images/taco.jpg');
-  background-image: url('https://jolly-kalam-23776e.netlify.app/restaurantwebsite/images/taco.jpg');
+  background-image: url('./../images/taco.jpg');
   background-size: cover;
   min-height: 300px;
   min-width: 450px;
