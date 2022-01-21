@@ -1,0 +1,202 @@
+* {
+  box-sizing: inherit;
+  min-width: auto;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+:root {
+  --bg-primary: #8d6a9f;
+  --bg-secondary: #f1bd69;
+  --bg-yellow: #ffc600;
+  --bg-third: #bb342f;
+  --bg-fourth: #8cbcb9;
+  --br-fifth: #c5cbd3;
+  --grid-gap: 20px;
+  --border-radious: 3px;
+}
+
+html {
+  font-weight: 800;
+  font-family: Helvetica, Arial, sans-serif;
+  text-shadow: rgb(177, 176, 174) 1px 0 2px;
+  background-image: linear-gradient(110deg, #fa849d, var(--bg-primary));
+}
+
+button {
+  background: var(--bg-secondary);
+  border-radius: var(--border-radious);
+  border: 0;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: var(--bg-yellow);
+}
+
+.basic {
+  margin: 45px;;
+  display: grid;
+  grid-gap: var(--grid-gap);
+}
+
+.navbar ul {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.navbar a {
+  border-radius: var(--border-radious);
+  background-color: var(--bg-secondary);
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  color: var(--black);
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.navbar a:hover {
+  background-color: var(--bg-yellow);
+}
+
+#top {
+  display: grid;
+  grid-gap: var(--grid-gap);
+  grid-template-areas: 'main p1'
+                      'main p2';
+}
+
+.main-taco {
+  grid-area: main;
+  background-image: url('../images/taco.jpg');
+  background-size: cover;
+  min-height: 300px;
+  min-width: 450px;
+  background-position: bottom right;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  color:rgb(240, 240, 240);
+}
+
+.main-taco h1 {
+  font-size: xx-large;
+}
+
+.pricebox {
+  border-radius: var(--border-radious);
+  background: var(--bg-secondary);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}
+
+.p1 {
+  grid-area: p1;
+}
+
+.p2 {
+  grid-area: p2;
+}
+.pricebox p {
+  margin: 0;
+}
+
+.price {
+  margin: 0;
+  font-size: 60px;
+  font-weight: 300;
+}
+
+#ranges {
+  padding: var(--grid-gap) 0 var(--grid-gap) 0;
+  display: grid;
+  grid-gap: var(--grid-gap);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.range {
+  border-radius: var(--border-radious);
+  background: white;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 0 4px  rgba(0,0,0,0.1);
+}
+
+.range h3 {
+  margin: 0;
+}
+.range:hover {
+  background-color: var(--bg-yellow);
+}
+
+.range .icon {
+  font-size: 50px;
+} 
+
+.range p {
+  color: rgba(0,0,0,0.5);
+}
+
+#about {
+  border-radius: var(--border-radious);
+  background: white;
+  padding:50px;
+  padding-left: 100px;
+  margin-bottom: var(--grid-gap);
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  align-items: center;
+}
+
+#about h2 {
+  font-size: x-large;
+}
+
+#instantgram {
+  display: grid;
+  grid-gap: var(--grid-gap);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+#instantgram img {
+  border-radius: var(--border-radious);
+  width: 100%;
+}
+
+#instantgram h2 {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-gap: var(--grid-gap);
+  align-items: center;
+}
+
+#instantgram h2:before, 
+#instantgram h2:after {
+  display: block;
+  content: '';
+  height: 10px;
+  background: linear-gradient(to var(--direction, left), var(--bg-secondary), transparent);
+}
+
+#instantgram h2:after {
+  --direction: right;
+}
+
+.box {
+  border-radius: var(--border-radious);
+  background-color: var(--bg-secondary);
+  border: 1px dodgerblue solid;
+}
